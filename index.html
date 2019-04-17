@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+  <meta charset="utf-8">
+  <title>Danh Sách Đơn Vị</title>
+</head>
+
+  <body>
+    <div id="app">
+      <h3>Danh Sách Các Đơn Vị</h3>
+      <div v-for="(result, index) in results" >
+        {{ result.DonViID }} - {{ result.TenDonVi }}
+    </div>
+    
+    <div  id="app1">
+      <div v-for="(result1, index) in results1">
+          <div>
+            <p>STT: {{ result1.CoQuanID }} - Đơn Vị: {{ result1.DonViID }} - {{ result1.TenCoQuan }}</p>
+          </div>           
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
